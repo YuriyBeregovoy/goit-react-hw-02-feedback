@@ -1,6 +1,6 @@
 const { Component } = require("react")
 
-class App extends Component {
+export class App extends Component {
 
 state = {
   good: 0,
