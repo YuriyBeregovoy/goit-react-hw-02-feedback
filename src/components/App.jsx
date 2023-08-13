@@ -17,10 +17,10 @@ state = {
         <button>Neutral</button>
       </div>
       <div>
-        <p>Statistics</p>
-        <p>Good</p>
-        <p>Bad</p>
-        <p>Neutral</p>
+          <p>Statistics</p>
+        <p>Good: {this.state.good}</p>
+        <p>Bad: {this.state.bad}</p>
+        <p>Neutral: {this.state.neutral}</p>
       </div></div>
   );
  }
