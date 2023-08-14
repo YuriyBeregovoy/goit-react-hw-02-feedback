@@ -15,7 +15,7 @@ state = {
       (prevState) => {
         return { good: prevState.good + 1, };
       },    () => this.countTotalFeedback(),
-      () => this.countPositiveFeedbackPercentage());
+     );
   };
 
   handleClickBad = () => {
@@ -23,7 +23,7 @@ state = {
       (prevState) => {
         return { bad: prevState.bad + 1, };
       }, () => this.countTotalFeedback(),
-      () => this.countPositiveFeedbackPercentage())
+      )
   };
 
  handleClickNeutral = () => {
@@ -31,7 +31,7 @@ state = {
       (prevState) => {
         return {neutral: prevState.neutral + 1, };
       }, () => this.countTotalFeedback(),
-      () => this.countPositiveFeedbackPercentage()
+      
     );
   };
 
