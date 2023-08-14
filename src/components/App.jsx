@@ -35,8 +35,8 @@ state = {
 
   countTotalFeedback = () => {
     this.setState(
-      (prevState) => {
-        return {total: prevState.neutral + prevState.bad + prevState.good, };
+      ({neutral, bad, good}) => {
+        return {total: neutral + bad + good, };
       });
   };
 
