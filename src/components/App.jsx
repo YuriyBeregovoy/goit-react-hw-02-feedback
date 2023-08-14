@@ -1,3 +1,4 @@
+import { GlobalStyle } from "./GlobalStyle";
 import { SectionTitles } from "./SectionTitles/SectionTitles";
 
 const { Component } = require("react")
@@ -60,7 +61,8 @@ state = {
   render() {
     return (
       <div>
-        <SectionTitles onLeaveFeedbackGood={this.handleClickGood} onLeaveFeedbackBad={this.handleClickBad} onLeaveFeedbackNeutral={this.handleClickNeutral} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positiveQuantity}/>
+        <SectionTitles onLeaveFeedbackGood={this.handleClickGood} onLeaveFeedbackBad={this.handleClickBad} onLeaveFeedbackNeutral={this.handleClickNeutral} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positiveQuantity} />
+        <GlobalStyle/>
       </div>
   );
  }
