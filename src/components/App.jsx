@@ -1,3 +1,4 @@
+import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 import { Statistics } from "./Statistics/Statistics";
 
 const { Component } = require("react")
@@ -60,10 +61,8 @@ state = {
     return (
       <div>
         <div>
-        <p>Please leave feedback</p>
-        <button onClick={this.handleClickGood}>Good</button>
-        <button onClick={this.handleClickBad}>Bad</button>
-        <button onClick={this.handleClickNeutral}>Neutral</button>
+          <p>Please leave feedback</p>
+          <FeedbackOptions  onLeaveFeedbackGood={this.handleClickGood} onLeaveFeedbackBad={this.handleClickBad} onLeaveFeedbackNeutral={this.handleClickNeutral} />
       </div>
       <div>
           <p>Statistics</p>
