@@ -1,3 +1,5 @@
+import { Statistics } from "./Statistics/Statistics";
+
 const { Component } = require("react")
 
 export class App extends Component {
@@ -56,7 +58,8 @@ state = {
 
   render() {
     return (
-     <div> <div>
+      <div>
+        <div>
         <p>Please leave feedback</p>
         <button onClick={this.handleClickGood}>Good</button>
         <button onClick={this.handleClickBad}>Bad</button>
@@ -64,12 +67,9 @@ state = {
       </div>
       <div>
           <p>Statistics</p>
-        <p>Good: {this.state.good}</p>
-        <p>Bad: {this.state.bad}</p>
-        <p>Neutral: {this.state.neutral}</p>
-        <p>Total: {this.state.total}</p>
-        <p>Positive feedback: {this.state.positiveQuantity}%</p>
-      </div></div>
+          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positiveQuantity}/>
+        </div>
+      </div>
   );
  }
 };
