@@ -1,7 +1,7 @@
-import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
-import { Statistics } from "./Statistics/Statistics";
+import { SectionTitles } from "./SectionTitles/SectionTitles";
 
 const { Component } = require("react")
+
 
 export class App extends Component {
 
@@ -60,14 +60,7 @@ state = {
   render() {
     return (
       <div>
-        <div>
-          <p>Please leave feedback</p>
-          <FeedbackOptions  onLeaveFeedbackGood={this.handleClickGood} onLeaveFeedbackBad={this.handleClickBad} onLeaveFeedbackNeutral={this.handleClickNeutral} />
-      </div>
-      <div>
-          <p>Statistics</p>
-          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positiveQuantity}/>
-        </div>
+        <SectionTitles onLeaveFeedbackGood={this.handleClickGood} onLeaveFeedbackBad={this.handleClickBad} onLeaveFeedbackNeutral={this.handleClickNeutral} good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.state.total} positivePercentage={this.state.positiveQuantity}/>
       </div>
   );
  }
