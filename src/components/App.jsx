@@ -14,33 +14,43 @@ state = {
     this.setState(
       (prevState) => {
         return { good: prevState.good + 1, };
-      },   () => this.countTotalFeedback());
+      },    () => this.countTotalFeedback(),
+      () => this.countPositiveFeedbackPercentage());
   };
 
   handleClickBad = () => {
     this.setState(
       (prevState) => {
         return { bad: prevState.bad + 1, };
-      },   () => this.countTotalFeedback());
+      }, () => this.countTotalFeedback(),
+      () => this.countPositiveFeedbackPercentage())
   };
 
  handleClickNeutral = () => {
     this.setState(
       (prevState) => {
         return {neutral: prevState.neutral + 1, };
-      },   () => this.countTotalFeedback()
+      }, () => this.countTotalFeedback(),
+      () => this.countPositiveFeedbackPercentage()
     );
   };
 
 
   countTotalFeedback = () => {
     this.setState(
-      ({neutral, bad, good}) => {
-        return {total: neutral + bad + good, };
-      });
+      ({ neutral, bad, good }) => {
+        return { total: neutral + bad + good, };
+      },
+    () => this.countPositiveFeedbackPercentage());
   };
 
-
+  countPositiveFeedbackPercentage = () => {
+   this.setState(
+      ({good, total}) => {
+        const positivePercentage = Math.round((good * 100) / total);
+      return { positiveQuantity: positivePercentage };
+      },);
+  };
 
 
 
